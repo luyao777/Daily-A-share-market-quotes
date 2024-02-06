@@ -12,7 +12,7 @@ def update_readme(date_str, sh_img_path, sz_img_path, bj_img_path):
     readme_file_path = os.path.join(current_directory, readme_file_name)
 
     file_content = f"""
-# Daily-A-share-market-quotes 每日 A 股指数（5min 更新）
+# Daily-A-share-market-quotes 每日 A 股指数（5min 更新）- {date_str}
 
 ### 上证指数 {date_str}
 ![]({sh_img_path})
