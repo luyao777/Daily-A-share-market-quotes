@@ -92,8 +92,8 @@ jobs:
 
       - name: Commit
         env:
-        USER_NAME: ${{ secrets.USER_NAME }}
-        USER_EMAIL: ${{ secrets.USER_EMAIL }}
+          USER_NAME: ${{ secrets.USER_NAME }}
+          USER_EMAIL: ${{ secrets.USER_EMAIL }}
         run: |
           git config --local user.name $USER_NAME
           git config --local user.email $USER_EMAIL
