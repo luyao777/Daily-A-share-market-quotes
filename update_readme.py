@@ -1,7 +1,11 @@
 import os
+from datetime import datetime
 
 
 def update_readme(date_str, sh_img_path, sz_img_path, bj_img_path):
+    now = datetime.now()
+    current_hr = str(now.hour)
+    current_min = str(now.minute)
 
     readme_file_name = 'README.md'
 
@@ -14,14 +18,13 @@ def update_readme(date_str, sh_img_path, sz_img_path, bj_img_path):
     file_content = f"""
 # Daily-A-share-market-quotes 每日 A 股指数（5min 更新）- {date_str}
 
-### 上证指数 {date_str}
+### 上证指数 {date_str} {current_hr:02}:{current_min:02}
 ![]({sh_img_path})
 
-
-### 深证成指 {date_str}
+### 深证成指 {date_str} {current_hr:02}:{current_min:02}
 ![]({sz_img_path})
 
-### 北证50 {date_str}
+### 北证50 {date_str} {current_hr:02}:{current_min:02}
 ![]({bj_img_path})
 """
 
