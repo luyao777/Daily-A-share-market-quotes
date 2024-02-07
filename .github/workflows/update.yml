@@ -1,7 +1,6 @@
 name: Update Readme
 
 on:
-  push:
   schedule:
     # 9:30 - 9:55 (每五分钟一次)
     - cron: "30 9 * * *" # 9:30
